@@ -3,4 +3,4 @@
 
 /.env
 
-/dev.js
+/server/config/dev.js
