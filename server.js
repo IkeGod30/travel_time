@@ -17,7 +17,7 @@ const connect = mongoose.connect(config.mongoURI,
 
 app.use(cors())
 
-app.use(cors({
+app.use(cors({ // CHECK
   origin: 'https://travel-time-react.vercel.app'
 }));
 

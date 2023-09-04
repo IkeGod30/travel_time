@@ -13,7 +13,7 @@ Rights to the graphics and other intellectual property have been retained by the
 - 
 
 ### Important Notes
-- React version 17
+- React version 18
 - Node version 18.16.0
 - This application continues to undergo expansion and other changes
 
