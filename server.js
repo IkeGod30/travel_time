@@ -9,11 +9,16 @@ const cookieParser = require("cookie-parser");
 const config = require("./server/config/key");
 const mongoose = require("mongoose");
 
+// ##################################################
+
 // const connect = mongoose.connect(config.mongoURI,
 //   {
 //     useNewUrlParser: true, useUnifiedTopology: true
 //     // useCreateIndex: true, useFindAndModify: false
 //   })
+
+// ###################################################
+// ORIGINAL CODE ABOVE
 
 const connect = mongoose.connect(process.env.MONGO_URI,
   {
