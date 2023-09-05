@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -7,7 +8,14 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const config = require("./server/config/key");
 const mongoose = require("mongoose");
-const connect = mongoose.connect(config.mongoURI,
+
+// const connect = mongoose.connect(config.mongoURI,
+//   {
+//     useNewUrlParser: true, useUnifiedTopology: true
+//     // useCreateIndex: true, useFindAndModify: false
+//   })
+
+const connect = mongoose.connect(process.env.MONGO_URI,
   {
     useNewUrlParser: true, useUnifiedTopology: true
     // useCreateIndex: true, useFindAndModify: false
