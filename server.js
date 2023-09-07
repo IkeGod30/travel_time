@@ -30,9 +30,9 @@ const connect = mongoose.connect(process.env.MONGO_URI,
 
 app.use(cors())
 
-app.use(cors({ // CHECK
-  origin: 'https://travel-time-react.vercel.app'
-}));
+// app.use(cors({ // CHECK
+//   origin: 'https://travel-time-react.vercel.app'
+// }));
 
 //to not get any deprecation warning or error
 //support parsing of application/x-www-form-urlencoded post data
