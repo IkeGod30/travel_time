@@ -21,7 +21,6 @@ function FileUpload(props) {
             alert('Failed to save the image in the Server')    
         }
     })
-
     }
 
     const onDelete = (image) => {
