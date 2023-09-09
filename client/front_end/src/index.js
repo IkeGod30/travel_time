@@ -3,8 +3,7 @@ import 'react-app-polyfill/ie11';
 import 'core-js';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import ReactDOM from 'react-dom/client'; // For React 18
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
@@ -39,30 +38,10 @@ const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)
 
 // The below is prefered and newer method of ReactDOM 
 
-    // const root = ReactDOM.createRoot(document.getElementById("root"));
-    // root.render(
-    //     <React.StrictMode>
-    //          <Provider
-    //     store={createStoreWithMiddleware(
-    //         Reducer,
-    //         window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    //         window.__REDUX_DEVTOOLS_EXTENSION__()
-    //     )}
-    // >
-    //     <BrowserRouter>
-    //         <App />
-    //     </BrowserRouter>
-    // </Provider>
-
-    //     </React.StrictMode>
-    // );
-
-
-    // For React and react-dom 17.0.2
-    // Removed <React.SrictMode> as advised, but no harm in putting it back afterwards
-    ReactDOM.render(
-        // <React.StrictMode>
-         <Provider
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(
+        <React.StrictMode>
+             <Provider
         store={createStoreWithMiddleware(
             Reducer,
             window.__REDUX_DEVTOOLS_EXTENSION__ &&
@@ -73,10 +52,30 @@ const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)
             <App />
         </BrowserRouter>
     </Provider>
-        //</React.StrictMode>
-        ,
-        document.getElementById('root')
-      );
+
+        </React.StrictMode>
+    );
+
+
+    // For React and react-dom 17.0.2
+    // Removed <React.SrictMode> as advised, but no harm in putting it back afterwards
+    // ReactDOM.render(
+    //     <React.StrictMode>
+    //      <Provider
+    //     store={createStoreWithMiddleware(
+    //         Reducer,
+    //         window.__REDUX_DEVTOOLS_EXTENSION__ &&
+    //         window.__REDUX_DEVTOOLS_EXTENSION__()
+    //     )}
+    // >
+    //     <BrowserRouter>
+    //         <App />
+    //     </BrowserRouter>
+    // </Provider>
+    //     </React.StrictMode>
+    //     ,
+    //     document.getElementById('root')
+    //   );
 
 
 // If you want your app to work offline and load faster, you can change
