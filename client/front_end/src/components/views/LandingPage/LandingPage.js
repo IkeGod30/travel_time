@@ -9,10 +9,7 @@ import SearchFeature from './Sections/SearchFeature';
 import { FaRocket } from 'react-icons/fa';
 import './Landing.css';
 
-
-
 const { Meta } = Card;
-
 
 function LandingPage() {
     const [Products, setProducts] = useState([])
