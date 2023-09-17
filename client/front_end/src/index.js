@@ -20,7 +20,7 @@ const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
-
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 // Review below
 
 
