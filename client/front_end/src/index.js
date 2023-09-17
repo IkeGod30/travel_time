@@ -1,6 +1,7 @@
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/ie11';
 import 'core-js';
+import axios from 'axios';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -16,6 +17,8 @@ import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
+
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 
 // Review below
