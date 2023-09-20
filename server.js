@@ -29,7 +29,7 @@ const connect = mongoose.connect(process.env.MONGO_URI,
   .then(() => console.log('MongoDB Connected now...'))
   .catch(err => console.log(err));
 
-app.use(cors({origin:'*'})) ////////
+app.use(cors({origin:'*'})) //////
 
 
 //to not get any deprecation warning or error
